@@ -2,3 +2,5 @@
 --color
 # rails_helperの読み込み
 --require rails_helper
+# 見やすくする
+--format documentation
