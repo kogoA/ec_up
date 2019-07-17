@@ -36,6 +36,20 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Sass for CSS
+gem 'materialize-sass', '~> 1.0.0'
+
+# form_for to input
+gem 'simple_form'
+
+# list of choice
+gem 'enumerize'
+
+gem 'jquery-rails'
+
+# 画像アップロード
+gem 'carrierwave', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -45,6 +59,8 @@ group :development, :test do
   gem 'capybara'
   gem 'pry'
   gem 'devise'
+  gem 'faker'
+  gem 'active_decorator'
 end
 
 group :development do
@@ -55,6 +71,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
+  gem 'annotate'
 end
 
 group :test do

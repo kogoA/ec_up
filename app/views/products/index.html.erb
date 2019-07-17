@@ -1,0 +1,17 @@
+<h2>商品一覧</h2>
+<div class="product">
+ <div class="row">
+  <% @products.each do |product| %>
+  <% if product.image.present? %>
+  <%= image_tag product.image_url %>
+  <% end %>
+      <p>
+        <%= product.name %>
+      </p>
+      <p>
+        <%= product.display_price %>
+      </p>
+    </div>
+    <hr/>
+  </div>
+<% end %>
