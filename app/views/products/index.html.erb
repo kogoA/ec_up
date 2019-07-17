@@ -2,16 +2,22 @@
 <div class="product">
  <div class="row">
   <% @products.each do |product| %>
-  <% if product.image.present? %>
-  <%= image_tag product.image_url %>
+    <% if product.image.present? %>
+      <%= image_tag product.image_url %>
+    <% else %>
+      <%= image_tag "sample.png" %>
   <% end %>
       <p>
         <%= product.name %>
       </p>
       <p>
+        <%= product.description %>
+      </p>
+      <p>
         <%= product.display_price %>
       </p>
-    </div>
+      <%= link_to "買い物かごに入れる", product %>
+     </div>
     <hr/>
   </div>
 <% end %>

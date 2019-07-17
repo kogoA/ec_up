@@ -18,6 +18,9 @@ class Product < ApplicationRecord
   validates :unit, presence: true
   extend Enumerize
   enumerize :unit, in: [:yen, :usd]
+  include Hashid::Rails
+
 
   mount_uploader :image, ImageUploader
+
 end
