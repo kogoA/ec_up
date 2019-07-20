@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# for stripe
+Dotenv::Railtie.load
+
 module EcUp
   class Application < Rails::Application
     config.paths.add 'lib', eager_load: true

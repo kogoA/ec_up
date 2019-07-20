@@ -3,3 +3,26 @@
 spec/rails_helper.rbのDir〜を有効化
 
 ・indexのCSSは3章最後の方をみる
+
+
+
+<%# 以下コメントやコピペ用  %>
+  <%# <%= form_tag charge_path do %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"></script>
+      <%= hidden_field_tag 'key', :ENV['STRIPE_API_KEY'] %>
+      <%= hidden_field_tag 'description', 'payment' %>
+      <%= hidden_field_tag 'amount', @total_price %>
+      <%= hidden_field_tag 'locale', 'auto' %>
+      <%= hidden_field_tag 'currency', 'jpy' %>
+    <% end %> %>
+
+<%# 'key', :ENV['STRIPE_API_KEY'] %>
+  <%# <%= form_tag charge_path do %>
+    <%= hidden_field_tag 'product_ids[]' %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"></script>
+      <%= hidden_field_tag 'key', :ENV['STRIPE_API_KEY'] %>
+      <%= hidden_field_tag 'description', 'payment' %>
+      <%= hidden_field_tag 'amount', @total_price %>
+      <%= hidden_field_tag 'locale', 'auto' %>
+      <%= hidden_field_tag 'currency', 'jpy' %>
+    <% end %> %>

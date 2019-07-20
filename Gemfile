@@ -53,6 +53,9 @@ gem 'carrierwave', '~> 1.0'
 # hash for IDs
 gem 'hashid-rails', '~> 1.0'
 
+# for payment
+gem 'stripe'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -61,9 +64,11 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'capybara'
   gem 'pry'
+  gem 'pry-byebug'
   gem 'devise'
   gem 'faker'
   gem 'active_decorator'
+  gem 'dotenv-rails'
 end
 
 group :development do

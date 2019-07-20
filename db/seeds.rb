@@ -10,7 +10,7 @@
   Product.create!(
     name: Faker::Book.title,
     description: Faker::Lorem.paragraph(2),
-    price: Faker::Number.within(100..100000),
+    price: Faker::Number.within(100..1000),
     unit: %w(yen usd).sample
   )
 end
