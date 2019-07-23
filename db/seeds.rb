@@ -8,9 +8,10 @@
 
 20.times do
   Product.create!(
+    admin_id: 1,
     name: Faker::Book.title,
     description: Faker::Lorem.paragraph(2),
     price: Faker::Number.within(100..1000),
-    unit: %w(yen usd).sample
+    unit: %w(yen).sample
   )
 end

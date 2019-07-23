@@ -41,10 +41,9 @@ class User < ApplicationRecord
 
       purchase_record = prepare_purchase_record
       ids = product_ids.map { |id| { product_id: id } }
-      
-      purchase_record.purchase_record_products.create(ids)
+      purchase_record.purchase_record_products.create!(ids)
     end
-    
+
     Charge.create!(total, token)
   end
 end
