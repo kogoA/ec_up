@@ -1,3 +1,4 @@
-class Admin::DashboardsController < ApplicationController
-  def index; end
+class Admins::DashboardsController < ApplicationController
+  def index
+  end
 end

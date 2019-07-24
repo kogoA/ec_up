@@ -1,0 +1,26 @@
+<div class='container'>
+  <h2 class='center'>
+    売上詳細
+  </h2>
+  <table>
+    <thead>
+      
+      <tr>
+        <th>商品名</th>
+        <th>価格</th>
+        <th>売上日</th>
+      </tr>
+     
+    </thead>
+    <tbody>
+    <%= @purchase_record_products.each do |purchase_record_product| %>
+       <%= product = purchase_record_product.product %>
+       <tr>
+        <td><%= product.name %></td>
+        <td><%= product.display_price %></td>
+        <td><%= purchase_record_product.created_at %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

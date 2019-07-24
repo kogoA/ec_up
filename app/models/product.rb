@@ -16,13 +16,15 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :unit, presence: true
-  USD_RATE = 110
   has_many :basket_products, dependent: :destroy
-  has_many :purchase_product_records, dependent: :destroy
+  has_many :purchase_record_products, dependent: :destroy
   belongs_to :admin, optional: true
+  USD_RATE = 110.freeze
+
 
   extend Enumerize
   enumerize :unit, in: %i[yen usd]
   include Hashid::Rails
   mount_uploader :image, ImageUploader
 end
+

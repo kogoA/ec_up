@@ -305,12 +305,11 @@
 #     - 'db/migrate/20190716093420_devise_create_users.rb'
 #     - 'db/migrate/20190716100054_devise_create_admins.rb'
 #     - 'db/schema.rb'
-#     - 'spec/rails_helper.rb'
-#     - 'spec/views/admin/dashboards/index.html.erb_spec.rb'
-#     - 'spec/views/home/new.html.erb_spec.rb'
-#     - 'spec/views/products/index.html.erb_spec.rb'
-#     - 'test/application_system_test_case.rb'
-
+# - "spec/rails_helper.rb"
+# - "spec/views/admin/dashboards/index.html.erb_spec.rb"
+# - "spec/views/home/new.html.erb_spec.rb"
+# - "spec/views/products/index.html.erb_spec.rb"
+# - "test/application_system_test_case.rb"
 # # Offense count: 3
 # # Cop supports --auto-correct.
 # # Configuration parameters: EnforcedStyle, MinSize.
