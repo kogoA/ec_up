@@ -1,5 +1,6 @@
-<h2>商品一覧</h2>
-<div class="product">
+<h2 class='center'>商品一覧</h2>
+<div class="products">
+<div class='row'>
 
   <% @products.each do |product| %>
    <div class="row mt-20">
@@ -19,6 +20,7 @@
         <%= product.display_price %>
       </p>
       <%= link_to "詳細", product %>
+     </div>
      </div>
      </div>
     <hr/>

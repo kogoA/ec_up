@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Sass for CSS
 gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
+gem 'bootstrap',     '4.1.1'
 
 # form_for to input
 gem 'simple_form'
