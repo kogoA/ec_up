@@ -9,8 +9,8 @@
 20.times do
   Product.create!(
     admin_id: 1,
-    name: Faker::Book.title,
-    description: Faker::Lorem.paragraph(2),
+    name: Faker::Games::Pokemon.name,
+    description: Faker::Games::Pokemon.move,
     price: Faker::Number.within(100..1000),
     unit: %w(yen).sample
   )

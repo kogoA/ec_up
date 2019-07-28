@@ -7,9 +7,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     accept_list = extension_whitelist.map { |e| "image/#{e}" }
     accept_list.join(',')
   end
+
+   process resize_to_fill: [100, 100, "Center"]
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   # storage :file

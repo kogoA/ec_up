@@ -1,28 +1,22 @@
 <h2 class='center'>商品一覧</h2>
 <div class="products">
 <div class='row'>
-
-  <% @products.each do |product| %>
-   <div class="row mt-20">
- <div class='col m12 s12 center'>
-    <% if product.image.present? %>
-      <%= image_tag product.image_url %>
-    <% else %>
-      <%= image_tag "sample.png" %>
-  <% end %>
-      <p>
-        <%= product.name %>
-      </p>
-      <p>
-        <%= product.description %>
-      </p>
-      <p>
-        <%= product.display_price %>
-      </p>
-      <%= link_to "詳細", product %>
-     </div>
-     </div>
-     </div>
-    <hr/>
+  <div class="row mt-20">
+    <% @products.each do |product| %>
+        <div class='col m12 s12 center'>
+          <% if product.image.present? %>
+            <div class="card" style="width: 18rem;"><%= link_to image_tag(product.image_url), product, :width => '288', :height => '180' %></div>
+          <% else %>
+            <div class="card" style="width: 18rem;"><%= link_to image_tag("sample.png"), product,:width => '288', :height => '180' %></div>
+          <% end %>
+          <div class="card-block">
+              <h5 class="card-title"><%= product.name %></h5>
+              <p class="card-text"><%= product.description %></p>
+              <p><%= product.display_price %></p>
+              <%= link_to "詳細", product, :class => "waves-effect waves-light btn" %>
+          </div>
+        </div>
+              <% end %>
+    </div>
+  <hr/>
   </div>
-<% end %>

@@ -26,3 +26,6 @@ spec/rails_helper.rbのDir〜を有効化
       <%= hidden_field_tag 'locale', 'auto' %>
       <%= hidden_field_tag 'currency', 'jpy' %>
     <% end %> %>
+
+# , :class => "waves-effect waves-light btn"
+              <%= link_to image_tag(product.image_url || "sample.png"), product %>
