@@ -8,7 +8,6 @@
         <span>
           売上履歴
           <span class='admin__sales ml-10'>
-            <%= @sales_current %>
                         <%# <div class="btn white"></div> %>
             <%= link_to '詳細', admins_sales_record_path %>
           </span>
@@ -18,7 +17,7 @@
         <span>
           今月の売上
           <span class='admin__sales ml-10'>
-            <%= @sales_total %>
+            <%= @sales %>
           </span>
           <%= link_to '詳細', admins_sales_record_path(start_at: Time.current.beginning_of_month, end_at: Time.current.end_of_month) %>
         </span>
