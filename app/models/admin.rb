@@ -19,5 +19,4 @@ class Admin < ApplicationRecord
     PriceCalculator.total(sold_products)
   end
 
-  @sales = Admin.last.sales_this_month
 end

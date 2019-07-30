@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admins do
-    get 'sales_records/show'
-  end
   devise_for :admins
   devise_for :users
   root 'products#index'
