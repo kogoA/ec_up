@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  layout 'user_products'
+
   def index
     @products = Product.all
   end

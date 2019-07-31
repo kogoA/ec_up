@@ -1,4 +1,6 @@
-class Admins::ProductsController < ApplicationController
+class Admins::ProductsController < Admins::ApplicationController
+  layout 'admin_products'
+
   def new
     @product = current_admin.products.build
   end
