@@ -5,6 +5,7 @@ class Admins::SalesRecordsController < Admins::ApplicationController
       start_at = Date.parse(params[:start_at])
       end_at = Date.parse(params[:end_at])
       @purchase_record_products = @purchase_record_products.where(created_at: start_at..end_at)
+      render :show_current
     end
   end
 end
