@@ -14,11 +14,8 @@
       <p class="alert"><%= alert %></p>
       <nav>
      <div class="nav-wrapper">
-     <%= link_to '商品を追加', new_admins_product_path %>
-       <ul class="right hide-on-med-and-down" id="nav-mobile">
-         <% if current_admin.present? %>
-          <li><%= link_to 'ログアウト（アドミン）', destroy_admin_session_path, method: :delete %></li>
-         <% end %>
+       <%= yield(:nav) %>
+       <%= yield(:nav02) %>
         </ul>
      </div>
    </nav>

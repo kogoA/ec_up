@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  layout 'user_products'
+  layout 'user'
 
   def index
     @products = Product.all

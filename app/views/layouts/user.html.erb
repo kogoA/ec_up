@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EcApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+        <nav>
+          <div class="nav-wrapper">
+            <ul class="right hide-on-med-and-down" id="nav-mobile">
+              <% if current_user.present? %>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% end %>
+            </ul>
+            <%= link_to root_path, :method => :get do %>
+              <i class="right material-icons">home</i>
+            <% end %>
+          </div>
+        </nav>
+    <%= yield %>
+  </body>
+</html>
