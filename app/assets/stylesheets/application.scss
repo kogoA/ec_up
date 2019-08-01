@@ -3,3 +3,15 @@ $primary-color: color("blue-grey", "lighten-1") !default;
 $secondary-color: color("teal", "lighten-3") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+footer {
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer address {
+    color: #313131;
+    letter-spacing: 5px;
+}

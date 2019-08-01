@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>管理画面</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+  <%= render 'layouts/admin_header' %>
   <body>
      <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
@@ -21,4 +13,5 @@
    </nav>
     <%= yield %>
   </body>
+    <%= render 'layouts/admin_footer' %>
 </html>

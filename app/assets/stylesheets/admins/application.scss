@@ -1,3 +1,20 @@
 // Place all the styles related to the admins::Application controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "materialize/components/color-variables";
+$primary-color: color("indigo", "darken-4") !default;
+$secondary-color: color("indigo", "lighten-1") !default;
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+footer {
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer address {
+    color: #313131;
+    letter-spacing: 5px;
+}
