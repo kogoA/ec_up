@@ -24,13 +24,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
+  has_many :baskets
+  has_many :products, through: :baskets
 
-  def prepare_basket
-    basket || create_basket
-  end
-
-  def prepare_purchase_record
-    purchase_record || create_purchase_record
+  def basket_total_price
+    PriceCalculator.total(products)
   end
 
   def checkout!(token, product_ids:)

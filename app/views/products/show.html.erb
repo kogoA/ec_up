@@ -9,7 +9,7 @@
   <%= @product.display_price %>
 </p>
 
-<%= link_to product_add_to_baskets_path(@product), method: :post do %>
+<%= link_to baskets_path({product_id: @product.id}), method: :post do %>
 <div class='btn btn-small'>
   買い物かごに入れる
 </div>

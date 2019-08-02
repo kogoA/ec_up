@@ -1,16 +1,18 @@
 <div class='container'>
   <h3 class='center mb-30'>カート内の商品</h3>
     <ul class='collection with-header'>
-      <%= @products.each do |product| %>
-        <li class='collection-item'>
-          <%= product.name %>
-          <p class="right">
-            <span><%= product.display_price %></span>
-            <%= link_to product_delete_in_baskets_path(product), method: :post, data: {confirm: '削除してもいいですか？'} do %>
-              <span class="basket__delete">×</>
-            <% end %>
-          </p>
-        </li>
+        <% current_user.baskets.each do |basket| %>
+          <% if basket.product %>
+            <li class='collection-item'>
+              <%= basket.product ? basket.product.name : ''%>
+              <p class="right">
+                <span><%= basket.product.display_price %></span>
+                <%= link_to basket_path(basket.id), method: :delete, data: {confirm: '削除してもいいですか？'} do %>
+                  <span class="basket__delete">×</>
+                <% end %>
+              </p>
+            </li>
+          <% end %>
         <% end %>
       </ul>
 
@@ -26,7 +28,7 @@
       </div>
     <% end %>
     <% end %>
-    
+
   </article>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="pk_test_Q95hNnEKVbKqpoaN4EfNscVH00TgRzit2S"
