@@ -5,4 +5,11 @@
 
     <%= stylesheet_link_tag    'admins/application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav>
+     <div class="nav-wrapper">
+       <%= yield(:nav) %>
+       <%= yield(:nav02) %>
+        </ul>
+     </div>
+   </nav>
   </head>

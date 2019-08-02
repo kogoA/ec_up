@@ -5,4 +5,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <nav>
+    <div class="nav-wrapper">
+      <ul class="right hide-on-med-and-down" id="nav-mobile">
+        <% if current_user.present? %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <% end %>
+        </ul>
+        <%= link_to basket_path, :method => :get do %>
+        <i class="right material-icons">shopping_cart</i>
+        <% end %>
+    </div>
+  </nav>
   </head>
+        
