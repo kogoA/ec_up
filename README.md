@@ -5,11 +5,11 @@ ruby 2.5.1
 Rails 5.2.3
 
 * Dependency
-Devise
-Stripe
-Carrierwave
-Mini_magitc
-Hashid-rails
+・Devise
+・Stripe
+・Carrierwave
+・Mini_magitc
+・Hashid-rails
 
 * Database creation
 ・Admin
