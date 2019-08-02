@@ -16,7 +16,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :unit, presence: true
-  has_many :basket_products, dependent: :destroy
+  has_many :basket, dependent: :destroy
   has_many :purchase_record_products, dependent: :destroy
   belongs_to :admin, optional: true
   USD_RATE = 110.freeze

@@ -36,8 +36,8 @@ class User < ApplicationRecord
   def checkout!(token, product_ids:)
     total = basket.total_price(product_ids: product_ids)
     transaction do
-      basket_products = basket.basket_products.where(product_id: product_ids)
-      basket_products.each(&:destroy!)
+      basket = basket.where(product_id: product_ids)
+      basket.each(&:destroy!)
 
       purchase_record = prepare_purchase_record
       ids = product_ids.map { |id| { product_id: id } }
