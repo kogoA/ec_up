@@ -24,6 +24,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
+  has_many :products, trough: :baskets
 
   def prepare_basket
     basket || create_basket
@@ -32,6 +33,12 @@ class User < ApplicationRecord
   def prepare_purchase_record
     purchase_record || create_purchase_record
   end
+
+  def basket_total_price(product_ids: nil)
+    products = product_ids ? self.products.where(id: product_ids) : self.products
+    PriceCalculator.total(products)
+  end
+
 
   def checkout!(token, product_ids:)
     total = basket.total_price(product_ids: product_ids)
