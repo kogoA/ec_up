@@ -2,8 +2,7 @@ class ChargesController < ApplicationController
   def create
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
     token = params[:stripeToken]
-    product_ids = params[:product_ids].map(&:to_i)
-    current_user.checkout!(token, product_ids: product_ids)
+    current_user.checkout!(token)
     redirect_to root_path, notice: 'お支払いが完了しました'
   end
 end
