@@ -27,16 +27,20 @@ class User < ApplicationRecord
   has_many :baskets
   has_many :products, through: :baskets
 
-  def basket_total_price
+  def basket_total_price(product_ids: product_ids)
     PriceCalculator.total(products)
   end
 
-  def checkout!(token, product_ids:)
-    total = basket.total_price(product_ids: product_ids)
-    transaction do
-      basket = basket.where(product_id: product_ids)
-      basket.each(&:destroy!)
+  def prepare_purchase_record
+    purchase_record || create_purchase_record
+  end
 
+
+  def checkout!(token, product_ids:)
+    total = basket_total_price(product_ids: product_ids)
+    transaction do
+      basket = products.where(product_id: product_ids)
+      products.each(&:destroy!)
       purchase_record = prepare_purchase_record
       ids = product_ids.map { |id| { product_id: id } }
       purchase_record.purchase_record_products.create!(ids)
