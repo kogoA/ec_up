@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     accept_list.join(',')
   end
 
-   process resize_to_fill: [100, 100, "Center"]
+  #  process resize_to_fill: [100, 100, "Center"]
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
    include CarrierWave::MiniMagick
@@ -40,7 +40,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  #   process resize_to_fit: [50, 50]
+  #   process resize_to_fit: [80,80]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.

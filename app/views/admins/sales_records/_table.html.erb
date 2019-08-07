@@ -7,8 +7,8 @@
       </tr>
     </thead>
     <tbody>
-    <%= @purchase_record_products.each do |purchase_record_product| %>
-       <%= product = purchase_record_product.product %>
+    <% @purchase_record_products.each do |purchase_record_product| %>
+       <% product = purchase_record_product.product %>
        <tr>
         <td><%= product.name %></td>
         <td><%= product.display_price %></td>

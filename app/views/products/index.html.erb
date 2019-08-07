@@ -1,23 +1,29 @@
-<h2 class='center'>商品一覧</h2>
 <div class="products">
-<div class='row'>
-  <div class="row mt-20">
-    <% @products.each do |product| %>
-        <div class='col m12 s12 center'>
-          <% if product.image.present? %>
-            <div class="card" style="width: 18rem;"><%= link_to image_tag(product.image_url), product, :width => '288', :height => '180' %></div>
-          <% else %>
-            <div class="card" style="width: 18rem;"><%= link_to image_tag("sample.png"), product,:width => '288', :height => '180' %></div>
-          <% end %>
-          <div class="card-block">
-              <h5 class="card-title"><%= product.name %></h5>
-              <p class="card-text"><%= product.description %></p>
-              <p><%= product.display_price %></p>
-              
-              <%= link_to "詳細", product, :class => "waves-effect waves-light btn" %>
+<div class="container">
+  <div class='row'>
+   <% @products.each do |product| %>
+    <div class="col s">
+          <div class='card'>
+            <% if product.image.present? %>
+              <div class="card-image" style="width: 18rem;"><%= link_to image_tag(product.image_url), product, :width => '100', :height => '100' %></div>
+            <% else %>
+              <div class="card-image" style="width: 18rem;"><%= link_to image_tag("sample.png"), product,:width => '100', :height => '100' %></div>
+            <% end %>
           </div>
-        </div>
-              <% end %>
+          <div class="card-content">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p><% product.description[0,16] + '..' %></p>
+            <p><%= if product.description.size > 16 then product.description[0,16] + '..' else product.description end %></p>
+            <p><% product.description.size  %></p>
+
+            <p><%= product.display_price %></p>
+            <hr/>
+            <%= link_to "詳細", product, :class => "waves-effect waves-light btn" %>
+          </div>
+          <br>
     </div>
-  <hr/>
+    <% end %>
   </div>
+    </div>
+ </div>
+  
