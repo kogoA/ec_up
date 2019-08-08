@@ -1,5 +1,9 @@
 # README
 
+* Description
+ECサイトアプリです。
+Adminが商品の登録をし、Userは商品の購入が出来ます。
+
 * Ruby&Rails version
 ruby 2.5.1
 Rails 5.2.3
