@@ -36,8 +36,8 @@ Password:password
 ●商品を購入方法
 Userでログインします。
 1.http://localhost:3000/users/sign_inにアクセスしログインする
-メールアドレス:hoge@hoge.com
-パスワード:Kogo1983
+メールアドレス:foo@foo.com
+パスワード:password
 2.一覧画面で詳細をクリック
 3.買い物かごに入れるをクリック→「カード支払い」ボタンをクリック
 4.商品のお支払い画面で下記を入力
