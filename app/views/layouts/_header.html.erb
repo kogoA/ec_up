@@ -1,0 +1,13 @@
+      <nav>
+    <div class="nav-wrapper">
+    <img src="/logo01.png" alt="Liruu design" width="45" height="auto" hspace="15" vspace="11"/>
+    <a href="/" class="brand-logo">park gallery</a>
+      <ul class="right hide-on-med-and-down" id="nav-mobile">
+        <% if current_user.present? %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <% end %>
+        </ul>
+    </div>
+  </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>

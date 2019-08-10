@@ -41,6 +41,9 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'bootstrap',     '4.1.1'
 
+# 'css for devise'
+gem "devise_materialize", "~>1.2.0"
+
 # form_for to input
 gem 'simple_form'
 
