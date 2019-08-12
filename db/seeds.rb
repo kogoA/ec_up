@@ -10,8 +10,9 @@
   Product.create!(
     admin_id: 1,
     name: Faker::Games::Pokemon.name,
-    description: Faker::Games::Pokemon.move,
-    price: Faker::Number.within(100..1000),
+    description: Faker::Quote.famous_last_words,
+    price: Faker::Number.within(100,300,500,700,1000,1500),
     unit: %w(yen).sample
+    image: Faker::LoremFlickr.image(size: "50x60")
   )
 end

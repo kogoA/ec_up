@@ -18,5 +18,4 @@ class Admin < ApplicationRecord
                       .where({ purchase_record_products: {created_at: Time.current.all_month} })
     PriceCalculator.total(sold_products)
   end
-
 end

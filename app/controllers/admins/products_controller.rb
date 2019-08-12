@@ -1,5 +1,4 @@
 class Admins::ProductsController < Admins::ApplicationController
-
   def new
     @product = current_admin.products.build
   end

@@ -4,13 +4,14 @@
     <ul>
       <li class='collection-item admin__collection-item'>
         <span>売上履歴<span class='admin__sales ml-10'>
+        <%= Admin.last.sales %><%= ' 円' %>
             <%= link_to '詳細', admins_sales_record_path %>
           </span>
         </span>
       </li>
       <li class='collection-item admin__collection-item'>
         <span>今月の売上<span class='admin__sales ml-10'>
-            <%= @sales %>
+         <%= Admin.last.sales_this_month %><%= ' 円' %>
           </span>
           <%= link_to '詳細', admins_sales_record_path(start_at: Time.current.beginning_of_month, end_at: Time.current.end_of_month) %>
         </span>
