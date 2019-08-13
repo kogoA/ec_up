@@ -9,10 +9,12 @@
     <%= favicon_link_tag('favicon.ico') %>
   </head>
   <body>
+  <main>
     <%= render 'layouts/user_header' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    </main>
     <%= render 'layouts/user_footer' %>
   </body>
 </html>
