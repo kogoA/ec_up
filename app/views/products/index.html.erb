@@ -12,7 +12,6 @@
           </div>
           <div class="card-content">
             <h5 class="card-title"><%= product.name %></h5>
-            <p><% product.description[0,16] + '..' %></p>
             <p><%= if product.description.size > 16 then product.description[0,16] + '..' else product.description end %></p>
             <p><% product.description.size  %></p>
 
@@ -24,6 +23,6 @@
     </div>
     <% end %>
   </div>
-    </div>
- </div>
+</div>
+</div>
   

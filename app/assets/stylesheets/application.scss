@@ -25,3 +25,22 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.brand-logo {
+    font-family: 'Armata', sans-serif;
+}
+
+.card {
+    height: 13em;
+}
+
+.card-image {
+    height: 13rem;
+    overflow: hidden;
+}
+
+.image>img {
+    max-width: 50%;
+    max-height: 30%
+    /* 画像幅以上拡大しないようにする指定 */
+}

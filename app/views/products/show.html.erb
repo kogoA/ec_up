@@ -1,5 +1,5 @@
   <head>
-    <title>EcApp</title>
+    <title>park gallery</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -8,6 +8,7 @@
   </head>
 
 <center>
+<div class="image">
 <%= image_tag(@product.image.url || "sample.png") %>
 <p>
   <%= @product.name %>
@@ -26,4 +27,5 @@
 <% end %>
 <br/>
 <br/>
+<div class="container">
 </center>
