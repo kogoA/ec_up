@@ -23,15 +23,11 @@ body {
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 10 auto;
 }
 
 .brand-logo {
     font-family: 'Armata', sans-serif;
-}
-
-.card {
-    height: 13em;
 }
 
 .card-image {
@@ -41,6 +37,5 @@ main {
 
 .image>img {
     max-width: 50%;
-    max-height: 30%
-    /* 画像幅以上拡大しないようにする指定 */
+    /* 画像を拡大しないようにする指定 */
 }
