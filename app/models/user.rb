@@ -24,7 +24,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
-  has_many :baskets
+  has_many :baskets, dependent: :destroy
   has_many :products, through: :baskets
 
   def basket_total_price
@@ -40,7 +40,6 @@ class User < ApplicationRecord
     PriceCalculator.total(products)
   end
 
-
   def checkout!(token)
     total = basket_total_price
     transaction do
@@ -53,4 +52,5 @@ class User < ApplicationRecord
     end
     Charge.create!(total, token)
   end
+
 end

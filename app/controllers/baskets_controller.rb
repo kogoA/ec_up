@@ -15,4 +15,5 @@ class BasketsController < ApplicationController
     Basket.find(params[:id]).destroy
     redirect_to baskets_path
   end
+  
 end
