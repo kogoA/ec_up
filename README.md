@@ -2,11 +2,13 @@
 
 * Description
 ECサイトアプリです。
-Adminが商品の登録をし、Userは商品の購入が出来ます。
+Adminが商品の登録(商品は登録済)をし、Userは商品の購入が出来ます。
+Adminは売上管理機能があります。
 
-* Ruby&Rails version
+* versions
 ruby 2.5.1
 Rails 5.2.3
+Bundler 2.0.1
 
 * Dependency
 ・Devise
@@ -14,12 +16,15 @@ Rails 5.2.3
 ・Carrierwave
 ・Mini_magitc
 ・Hashid-rails
+・Simple_form
+・Materialize-sass
+・Devise_materialize
+・Bootstrap
 
 * Database creation
 ・Admin
 ・User
 ・Basket
-・BasketProduct
 ・Product 
 ・PurchaseRecord
 ・PurchaseRecordProduct
@@ -27,15 +32,15 @@ Rails 5.2.3
 * Usage
 ●商品を登録
 Adminでログインします。
-1.http://localhost:3000/admins/sign_inにアクセスしログインする
+1.[http://localhost:3000/admins/sign_in] にアクセスしログインする
 Email:aaaaaaaa@gmail.com
 Password:password
-2.http://localhost:3000/admins/products/newにアクセスし商品を登録する
-3.http://localhost:3000/にアクセスし最後の欄に登録が反映されます
+2.[http://localhost:3000/admins/products/new] にアクセスし商品を登録する
+3.[http://localhost:3000/] にアクセスし最後の欄に登録が反映されます
 
 ●商品を購入方法
 Userでログインします。
-1.http://localhost:3000/users/sign_inにアクセスしログインする
+1.[http://localhost:3000/users/sign_in] にアクセスしログインする
 メールアドレス:foo@foo.com
 パスワード:password
 2.一覧画面で詳細をクリック
