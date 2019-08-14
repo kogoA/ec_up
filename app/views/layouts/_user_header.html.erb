@@ -1,21 +1,17 @@
-  <head>
-    <title>EcApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <nav>
     <div class="nav-wrapper">
+    <img src="/logo05.png" alt="Liruu design" width="45" height="auto" hspace="15" vspace="11"/>
+    <a href="/" class="brand-logo">park gallery</a>
       <ul class="right hide-on-med-and-down" id="nav-mobile">
         <% if current_user.present? %>
+         <li><%= link_to baskets_path, :method => :get do %>
+          <i class="right material-icons">shopping_cart</i>
+        <% end %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path %></li>
         <% end %>
         </ul>
-        <%= link_to basket_path, :method => :get do %>
-        <i class="right material-icons">shopping_cart</i>
-        <% end %>
     </div>
   </nav>
-  </head>
-        
+

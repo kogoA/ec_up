@@ -6,12 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do
+20.times do |n|
   Product.create!(
     admin_id: 1,
     name: Faker::Games::Pokemon.name,
-    description: Faker::Games::Pokemon.move,
+    description: Faker::Quote.famous_last_words,
     price: Faker::Number.within(100..1000),
-    unit: %w(yen).sample
+    unit: %w(yen).sample,
+    image: open("#{Rails.root}/db/fixtures/img#{n}.jpeg")
   )
 end

@@ -1,15 +1,10 @@
-  <head>
-    <title>管理画面</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'admins/application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <nav>
-     <div class="nav-wrapper">
-       <%= yield(:nav) %>
-       <%= yield(:nav02) %>
-        </ul>
-     </div>
-   </nav>
-  </head>
+<nav>
+  <div class="nav-wrapper">
+      <img src="/logo05.png" alt="Liruu design" width="45" height="auto" hspace="15" vspace="11"/>
+  <a href="/admins" class="brand-logo">park gallery</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= yield(:nav) %></li>
+      <li><%= yield(:nav02) %></li>
+    </ul>
+  </div>
+</nav>

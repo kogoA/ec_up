@@ -9,22 +9,21 @@
 #  unit        :string           default("yen"), not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#
-
 class Product < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
   validates :unit, presence: true
-  has_many :basket_products, dependent: :destroy
+  has_many :basket, dependent: :destroy
   has_many :purchase_record_products, dependent: :destroy
   belongs_to :admin, optional: true
   USD_RATE = 110.freeze
-
-
   extend Enumerize
   enumerize :unit, in: %i[yen usd]
   include Hashid::Rails
   mount_uploader :image, ImageUploader
-end
 
+  def thumbnail
+    return self.variant(resize: '300x300').processed
+  end
+end

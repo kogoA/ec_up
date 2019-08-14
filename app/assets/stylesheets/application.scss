@@ -1,6 +1,6 @@
 @import "materialize/components/color-variables";
-$primary-color: color("blue-grey", "lighten-1") !default;
-$secondary-color: color("teal", "lighten-3") !default;
+$primary-color: color("grey", "darken-3") !default;
+$secondary-color: color("grey", "darken-1") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 footer {
@@ -14,4 +14,28 @@ footer {
 footer address {
     color: #313131;
     letter-spacing: 5px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 10 auto;
+}
+
+.brand-logo {
+    font-family: 'Armata', sans-serif;
+}
+
+.card-image {
+    height: 13rem;
+    overflow: hidden;
+}
+
+.image>img {
+    max-width: 50%;
+    /* 画像を拡大しないようにする指定 */
 }
