@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 # for stripe
-Dotenv::Railtie.load
+# Dotenv::Railtie.load
 
 module EcUp
   class Application < Rails::Application
