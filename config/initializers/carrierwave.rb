@@ -3,8 +3,8 @@ if Rails.env.production?
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: 'AKIAYM2BFNBRYEL42HOU',
-      aws_secret_access_key: '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',
+      aws_access_key_id: ENV['AWS_S3_ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['AWS_S3_SECRET_ACCESS_KEY'],
       #S3のリージョン #ap-northeast-1はアジアパシフィック(東京)
       region: 'ap-northeast-1'
     }
