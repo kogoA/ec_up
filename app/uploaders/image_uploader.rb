@@ -13,6 +13,30 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
    include CarrierWave::MiniMagick
 
+  # 環境毎の画像保存先
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
+
+  # S3のディレクトリ名
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+   # 許可する画像の拡張子
+  def extension_whitelist
+     %w(jpg jpeg gif png)
+  end
+
+  # 保存するファイルの命名規則
+  def filename
+     "#{file.extension}" if original_filename.present?
+  end
+
   #  version :thumb do
   #    process resize_to_fit: [100, 100]
   #  end

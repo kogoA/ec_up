@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :description, :product])
+  end
+
   private
   # deviseの管理者権限logout後のリダイレクト先指定
   def after_sign_out_path_for(resource)
