@@ -34,8 +34,8 @@ Bundler 2.0.1
 * Usage  
 ●商品を登録
 Adminでログインします。  
-1.http://localhost:3000/admins/sign_in にアクセスしログインする
-Email:aaaaaaaa@gmail.com
+1.http://localhost:3000/admins/sign_in にアクセスしログインする  
+Email:aaaaaaaa@gmail.com  
 Password:password  
 2.新規商品の追加を選択し商品を登録する  
 3.ログアウト（アドミン）をクリックしログアウトする  
