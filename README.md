@@ -2,7 +2,7 @@
 https://github.com/kogoA/ec_up/issues/2
 https://user-images.githubusercontent.com/45598368/63143720-a9b6ce00-c02a-11e9-8fed-e83b70543c2b.gif
 
-######* Description  
+###### Description  
  ECサイトアプリです。
  Adminが商品の登録(商品は登録済)をし、Userは商品の購入が出来ます。
  Adminは売上管理機能があります。
