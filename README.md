@@ -37,8 +37,8 @@ Adminでログインします。
 1.http://localhost:3000/admins/sign_in にアクセスしログインする
 Email:aaaaaaaa@gmail.com
 Password:password  
-2.http://localhost:3000/admins/products/new にアクセスし商品を登録する  
-3.http://localhost:3000/ にアクセスし最後の欄に登録が反映されます  
+2.新規商品の追加を選択し商品を登録する  
+3.http://localhost:3000/ (park galleryをクリック)にアクセスし最後の欄に登録が反映されます  
 ●商品を購入方法
 Userでログインします。  
 1.http://localhost:3000/users/sign_in にアクセスしログインする
