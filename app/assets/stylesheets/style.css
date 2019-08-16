@@ -45,7 +45,9 @@ application.scss:1
 /Users/admin/.rbenv/versions/2.5.1/bin/sass:23:in `load'
 /Users/admin/.rbenv/versions/2.5.1/bin/sass:23:in `<main>'
 */
+
 body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: materialize/components/color-variables.\A         on line 1 of application.scss\A \A 1: @import \"materialize/components/color-variables\";\A 2: $primary-color: color(\"grey\", \"darken-3\") !default;\A 3: $secondary-color: color(\"grey\", \"darken-1\") !default;\A 4: @import \"materialize\";\A 5: @import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\A 6: @import './mixin/fonts';"; }
+    white-space: pre;
+    font-family: monospace;
+    content: "Error: File to import not found or unreadable: materialize/components/color-variables.\A         on line 1 of application.scss\A \A 1: @import \"materialize/components/color-variables\";\A 2: $primary-color: color(\"grey\", \"darken-3\") !default;\A 3: $secondary-color: color(\"grey\", \"darken-1\") !default;\A 4: @import \"materialize\";\A 5: @import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\A 6: @import './mixin/fonts';";
+}
