@@ -1,5 +1,6 @@
 class BasketsController < ApplicationController
   before_action :authenticate_user!
+  layout 'user'
 
   def index
     @products = current_user.products
