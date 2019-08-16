@@ -1,4 +1,5 @@
 # README
+https://github.com/kogoA/ec_up/issues/2
 
 * Description
 ECサイトアプリです。
