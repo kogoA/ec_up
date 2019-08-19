@@ -32,3 +32,13 @@ main {
 .brand-logo {
     font-family: 'Armata', sans-serif;
 }
+
+.card-image {
+    height: 13rem;
+    overflow: hidden;
+}
+
+.image>img {
+    max-width: 50%;
+    /* 画像を拡大しないようにする指定 */
+}

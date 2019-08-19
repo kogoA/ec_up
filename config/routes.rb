@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   namespace :admins do
     root to: "dashboards#index"
-    resources :products, only: %i(new create)
+    resources :products, only: %i(index new create show)
+    delete 'products/:id' => 'products#destroy'
+
     resource :sales_record, only: %(show)
   end
 end

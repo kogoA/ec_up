@@ -13,6 +13,16 @@ class Admins::ProductsController < Admins::ApplicationController
     end
   end
 
+  def index
+    @products = Product.all
+  end
+
+  def destroy
+    @product = Product.find_by_hashid(params[:hashid])
+    @product.destroy
+    redirect_to(root_path)
+  end
+
   private
 
   def product_params
