@@ -18,9 +18,8 @@ class Admins::ProductsController < Admins::ApplicationController
   end
 
   def destroy
-    @product = Product.find_by_hashid(params[:hashid])
-    @product.destroy
-    redirect_to(root_path)
+    Product.find(params[:id]).destroy
+    redirect_to(admins_products_path)
   end
 
   private
