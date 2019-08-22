@@ -33,5 +33,8 @@ RSpec.describe Product, type: :model do
     #   expect(another_user.errors[:email]).to
     # end
 
+    # FactoryBot.create(:image)
+
+
 
 end

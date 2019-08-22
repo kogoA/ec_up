@@ -22,5 +22,4 @@ class Products::ApplicationController < ApplicationController
     basket_product.destroy!
     redirect_to basket_path
   end
-
 end

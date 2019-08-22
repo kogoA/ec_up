@@ -12,15 +12,16 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :description, :product])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username description product])
   end
 
   private
+
   # deviseの管理者権限logout後のリダイレクト先指定
   def after_sign_out_path_for(resource)
     if resource == :user
       root_path
-    else resource == :admin
+    elsif resource == :admin
       new_admin_session_path
     end
   end

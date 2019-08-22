@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #  process resize_to_fill: [100, 100, "Center"]
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-   include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # 環境毎の画像保存先
   if Rails.env.development?
@@ -27,14 +27,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-   # 許可する画像の拡張子
-  def extension_whitelist
-     %w(jpg jpeg gif png)
-  end
-
   # 保存するファイルの命名規則
   def filename
-     "#{file.extension}" if original_filename.present?
+    file.extension.to_s if original_filename.present?
   end
 
   #  version :thumb do

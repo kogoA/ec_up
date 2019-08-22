@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
- gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -35,12 +35,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Sass for CSS
-gem 'materialize-sass', '~> 1.0.0'
+gem 'bootstrap', '4.1.1'
 gem 'material_icons'
-gem 'bootstrap',     '4.1.1'
+gem 'materialize-sass', '~> 1.0.0'
 
 # 'css for devise'
-gem "devise_materialize", "~>1.2.0"
+gem 'devise_materialize', '~>1.2.0'
 
 # form_for to input
 gem 'simple_form'
@@ -71,20 +71,20 @@ gem 'fog-aws'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'active_decorator'
-  gem 'sqlite3'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'letter_opener'
   gem 'pry'
   gem 'pry-byebug'
   gem 'rspec-rails'
-  gem 'spring-commands-rspec'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'database_cleaner'
-  gem 'letter_opener'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -94,19 +94,19 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'annotate'
   gem 'pry-rails'
+  gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
-  gem 'rails-erd'
-end   
+end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   # gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'webdrivers'
-  gem 'rails-controller-testing'
   gem 'capybara-screenshot'
+  gem 'rails-controller-testing'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

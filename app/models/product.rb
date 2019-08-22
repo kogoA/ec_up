@@ -17,13 +17,13 @@ class Product < ApplicationRecord
   has_many :basket, dependent: :destroy
   has_many :purchase_record_products, dependent: :destroy
   belongs_to :admin, optional: true
-  USD_RATE = 110.freeze
+  USD_RATE = 110
   extend Enumerize
   enumerize :unit, in: %i[yen usd]
   include Hashid::Rails
   mount_uploader :image, ImageUploader
 
   def thumbnail
-    return self.variant(resize: '300x300').processed
+    variant(resize: '300x300').processed
   end
 end
