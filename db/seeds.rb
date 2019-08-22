@@ -11,7 +11,7 @@
     admin_id: 1,
     name: Faker::Games::Pokemon.name,
     description: Faker::Quote.famous_last_words,
-    price: Faker::Number.within(100..1000),
+    price: Faker::Number.within(range: 100..1000),
     unit: %w(yen).sample,
     image: open("#{Rails.root}/db/fixtures/img#{n}.jpeg")
   )

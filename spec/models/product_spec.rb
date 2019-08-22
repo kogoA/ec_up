@@ -14,5 +14,24 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  # it "is valid with a name, email, password, password_confirmation" do
+  #     user = build(:user)
+  #     expect(user).to be_valid
+  #   end
+
+  # it "is invalid without a password_confirmation although with a password" do
+  #     user = build(:user, password_confirmation: "")
+  #     user.valid?
+  #     expect(user.errors[:password_confirmation]).to
+  #   end
+
+    # it "is invalid with a duplicate email address" do
+    #   user = create(:user)
+    #   another_user = build(:user, email: user.email)
+    #   another_user.valid?
+    #   expect(another_user.errors[:email]).to
+    # end
+
+
 end

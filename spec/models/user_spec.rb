@@ -19,5 +19,48 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+# it "factorybot is in function" do
+#   user = build(:user)
+#   expect(user).to be_valid
+# end
+
+it "is valid with a email, and password" do
+user = User.new(
+      email:      "tester@example.com",
+      password:   "passowrd123",
+)
+    expect(user).to be_valid
 end
+
+# it "重複したメールアドレスなら無効な状態であること" do
+#   User.create(
+#     email:      "tester@example.com",
+#     password:   "passowrd123",
+#   )
+#     password { password }
+#     password_confirmation { password }
+#    user = User.new(
+#     email:      "tester@example.com",
+#     password:   "passowrd12345",
+#    )
+#     password { password }
+#     password_confirmation { password }
+#    user.valid?
+#    expect(user.errors[:email])
+#   end
+
+# it "重複したメールアドレスなら無効な状態であること" :user02 do
+#   user = create(:user02)
+#   user2 = create(:user02)
+#   expect(user).to be_invalid
+# end
+
+
+# it "is invalid with a duplicate email address" do
+# user1 = FactoryBot.create(user)
+#   expect(user1).to be_valid
+# end
+  
+end
+

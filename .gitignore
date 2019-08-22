@@ -33,3 +33,5 @@
 # Ignore stripe keys
 .env
 
+# spec test
+/spec/test_uploads
