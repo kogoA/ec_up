@@ -17,7 +17,7 @@
 #
 
 FactoryBot.define do
-  # factory :user do
+  # factory :user2 do
   #   email { Faker::Internet.email }
   #   password = Faker::Number.number(digits: 10)
   #   password { password }
@@ -26,8 +26,9 @@ FactoryBot.define do
 
   factory :user do
     email { 'foobar@amail.com' }
-    password =  'password' 
-    password { password }
-    password_confirmation { password }
+    # password =  'password' 
+    password { 'password' }
+    # password_confirmation { password }
+    confirmed_at { Date.today }
     end
 end

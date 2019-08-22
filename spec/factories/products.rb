@@ -10,18 +10,18 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+require "rails_helper"
 
-# FactoryBot.define do
-#   factory :product do
-#     20.times do |n|
-#   Product.create!(
-#     admin_id: 1,
-#     name: Faker::Games::Pokemon.name,
-#     description: Faker::Quote.famous_last_words,
-#     price: Faker::Number.within(range: 100..1000),
-#     unit: %w(yen).sample,
-#     image: open("#{Rails.root}/db/fixtures/img#{n}.jpeg")
-#   )
-# end
-#   end
-# end
+FactoryBot.define do
+  factory :product do
+    20.times do |n|
+  Product.create!(
+    admin_id: 1,
+    name: Faker::Games::Pokemon.name,
+    description: Faker::Quote.famous_last_words,
+    price: Faker::Number.within(range: 100..1000),
+    unit: %w(yen).sample,
+)
+end
+  end
+end
