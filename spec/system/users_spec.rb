@@ -20,6 +20,7 @@ RSpec.describe 'Users', type: :system do
         click_on('買い物かごに入れる')
         click_on('park gallery')
         all(:link, '詳細')[3].click
+        # binding.pry
         click_on('買い物かごに入れる')
         click_on('park gallery')
         click_on('shopping_cart')
