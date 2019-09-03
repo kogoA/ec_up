@@ -9,7 +9,7 @@ RSpec.describe 'Users', type: :system do
     context 'can login' do
       scenario 'ログインする' do
         # トップページを開く
-        visit root_path#
+        visit root_path
         click_on 'ログイン'
         fill_in 'メールアドレス', with: 'foobar@amail.com'
         fill_in 'パスワード', with: 'password'
