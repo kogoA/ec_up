@@ -93,6 +93,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # for stripe
-  config.stripe.secret_key = Rails.application.credentials.stripe[:production][:secret_key]
-  config.stripe.publishable_key = Rails.application.credentials.stripe[:production][:publishable_key]
+  # config.stripe.secret_key = Rails.application.credentials.stripe[:production][:secret_key]
+  # config.stripe.publishable_key = Rails.application.credentials.stripe[:production][:publishable_key]
 end
