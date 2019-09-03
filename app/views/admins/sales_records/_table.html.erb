@@ -9,11 +9,11 @@
     <tbody>
     <% @purchase_record_products.each do |purchase_record_product| %>
        <% product = purchase_record_product.product %>
-       <tr>
+        <tr>
         <td><%= product.name %></td>
         <td><%= product.display_price %></td>
         <td><%= purchase_record_product.created_at %></td>
         </tr>
-        <% end %>
+       <% end %>
     </tbody>
   </table>

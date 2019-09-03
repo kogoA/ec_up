@@ -45,15 +45,6 @@ ActiveRecord::Schema.define(version: 2019_08_17_030224) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "basket_products", force: :cascade do |t|
-    t.integer "basket_id", null: false
-    t.integer "product_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["basket_id"], name: "index_basket_products_on_basket_id"
-    t.index ["product_id"], name: "index_basket_products_on_product_id"
-  end
-
   create_table "baskets", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
