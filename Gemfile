@@ -80,6 +80,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'letter_opener'
+  gem 'letter_opener_web'
   gem 'pry'
   gem 'pry-byebug'
   gem 'rspec-rails'

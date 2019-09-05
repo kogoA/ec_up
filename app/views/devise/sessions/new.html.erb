@@ -3,19 +3,19 @@
     <div class="card hoverable">
       <div class="card-content">
         <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
-          <% if resource_name == :admin then %>
-          <%= stylesheet_link_tag "admins/application", :media => "all" %>
-          <span class="card-title center">管理者ログイン</span>
-          <% else %>
-          <span class="card-title center">ログイン</span>
-          <% end %>
+            <% if resource_name == :admin then %>
+            <%= stylesheet_link_tag "admins/application", :media => "all" %>
+            <span class="card-title center">管理者ログイン</span>
+            <% else %>
+            <span class="card-title center">ログイン</span>
+            <% end %>
           <div class="divider"></div>
           <div class="form-inputs row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <%= f.email_field :email, required: true, autofocus: true %>
-              <%= f.label :email %>
-            </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <%= f.email_field :email, required: true, autofocus: true %>
+                <%= f.label :email %>
+              </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">lock</i>
               <%= f.password_field :password, required: true, autocomplete: "off" %>
@@ -26,8 +26,16 @@
           </div>
           <div class="form-actions center">
             <%= f.submit "ログイン", class: "btn waves-effect" %>
-          </div>
-        <% end %>
+            <% end %>
+            </div>
+            </br>
+             <div class="form-actions center">
+            <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+              <%= f.hidden_field :email, value: "foo@foo.com", required: false, autofocus: true %>
+              <%= f.hidden_field :password, value: "password", required: false, autocomplete: "off" %>
+              <%= f.submit "かんたんログイン", class: "btn waves-effect" %>
+            <% end %>
+            </br>
       </div>
       <div class="card-action">
         <div class="devise-links">
@@ -36,9 +44,4 @@
       </div>
     </div>
   </div>
-   <script>
-# $(function() {
-# $("#user_email").val('foo.com'); 
-#  });
-# </script>
 </div>
