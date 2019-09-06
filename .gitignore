@@ -35,5 +35,3 @@
 
 # spec test
 /spec/test_uploads
-
-contact_mailer.rb
