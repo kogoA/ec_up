@@ -95,4 +95,19 @@ Rails.application.configure do
   # for stripe
   # config.stripe.secret_key = Rails.application.credentials.stripe[:production][:secret_key]
   # config.stripe.publishable_key = Rails.application.credentials.stripe[:production][:publishable_key]
+
+  # Setup the mailer config
+  # Use SendGrid - Add-ons - Heroku
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      user_name: ENV['SENDGRID_USERNAME'],
+      password: ENV['SENDGRID_PASSWORD'],
+      domain: 'example.com',
+      address: 'smtp.sendgrid.net',
+      port: 587,
+      authentication: :plain,
+      enable_starttls_auto: true
+  }
 end

@@ -1,5 +1,7 @@
 {
   "name": "ec_up",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0"
+  }
 }

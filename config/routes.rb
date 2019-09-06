@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'inquiry/index'
+  post 'inquiry/confirm'
+  post 'inquiry/thanks'
   devise_for :admins
   devise_for :users
   root 'products#index'
