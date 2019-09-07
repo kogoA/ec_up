@@ -8,8 +8,10 @@
           <i class="right material-icons">shopping_cart</i>
         <% end %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'お問い合わせ', inquiry_index_path %></li>
           <% else %>
           <li><%= link_to 'ログイン', new_user_session_path %></li>
+          <li><%= link_to 'お問い合わせ', new_user_session_path %></li>
           <% end %>
         </ul>
     </div>
