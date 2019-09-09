@@ -7,6 +7,7 @@
          <li><%= link_to baskets_path, :method => :get do %>
           <i class="right material-icons">shopping_cart</i>
         <% end %></li>
+          <li><%= link_to 'ほしい物リスト', user_path(:user) %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'お問い合わせ', inquiry_index_path %></li>
           <% else %>

@@ -17,6 +17,8 @@ class Product < ApplicationRecord
   has_many :basket, dependent: :destroy
   has_many :purchase_record_products, dependent: :destroy
   belongs_to :admin, optional: true
+  belongs_to :user
+  has_many :favorites
   USD_RATE = 110
   extend Enumerize
   enumerize :unit, in: %i[yen usd]
@@ -25,5 +27,9 @@ class Product < ApplicationRecord
 
   def thumbnail
     variant(resize: '300x300').processed
+  end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end
