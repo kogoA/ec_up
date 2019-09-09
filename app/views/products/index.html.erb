@@ -18,13 +18,18 @@
             <%= product.display_price %>
               <% if user_signed_in? %>
                 <% if product.favorited_by?(current_user) %> 
-                    <i class="right material-icons">favorite<%=link_to product.favorites.count, product_favorites_path(product.id), method: :delete %></i>
+                    <%= link_to product_favorites_path(product.id), method: :delete do %>
+                      <% product.favorites.count %>
+                      <i class="right material-icons">favorite</i>
+                    <% end %>
                 <% else %>
-                    <i class="right material-icons">favorite_border<%=link_to product.favorites.count, product_favorites_path(product.id), method: :post %></i>
+                    <%= link_to product_favorites_path(product.id), method: :post do %>
+                      <% product.favorites.count %>
+                    <i class="right material-icons">favorite_border</i>
+                    <% end %>
                 <% end %>
               <% end %>
             </p>
-
             <hr/>
             <%= link_to "詳細", product, :class => "waves-effect waves-light btn" %>
           </div>
