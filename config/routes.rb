@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resource :charge, only: %i(create)
   resources :products
   resources :baskets
-  resources :contacts
+  resources :favorites
+  resources :products do
+    resource :favorites, only: [:index, :create, :destroy]
+  end
 
   namespace :admins do
     root to: "dashboards#index"
