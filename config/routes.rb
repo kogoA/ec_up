@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
+  get 'favorites/destroy'
   get 'inquiry/index'
   post 'inquiry/confirm'
   post 'inquiry/thanks'
