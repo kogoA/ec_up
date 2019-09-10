@@ -26,4 +26,8 @@ class Product < ApplicationRecord
   def thumbnail
     variant(resize: '300x300').processed
   end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end

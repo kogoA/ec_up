@@ -26,6 +26,8 @@ class User < ApplicationRecord
          :confirmable
   has_many :baskets, dependent: :destroy
   has_many :products, through: :baskets
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :product
 
   def basket_total_price
     PriceCalculator.total(products)
