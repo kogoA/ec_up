@@ -29,11 +29,14 @@
             </div>
             <% end %>
             </br>
+            <% if resource_name == :admin then %>
+            <% else %>
              <div class="form-actions center">
               <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
                 <%= f.hidden_field :email, value: "foo@foo.com", required: false, autofocus: true %>
                 <%= f.hidden_field :password, value: "password", required: false, autocomplete: "off" %>
                 <%= f.submit "かんたんログイン", class: "btn waves-effect" %>
+              <% end %>
               <% end %>
             </br>
       </div>

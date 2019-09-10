@@ -35,3 +35,5 @@
 
 # spec test
 /spec/test_uploads
+
+.vscode
