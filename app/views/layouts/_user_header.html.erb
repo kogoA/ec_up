@@ -4,12 +4,15 @@
     <a href="/" class="brand-logo">park gallery</a>
       <ul class="right hide-on-med-and-down" id="nav-mobile">
         <% if current_user.present? %>
+         <li><%= link_to 'Home', root_path %></li>
          <li><%= link_to baskets_path, :method => :get do %>
           <i class="right material-icons">shopping_cart</i>
         <% end %></li>
+          <li><%= link_to 'ほしい物リスト', favorites_path(:user) %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'お問い合わせ', inquiry_index_path %></li>
           <% else %>
+          <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'ログイン', new_user_session_path %></li>
           <li><%= link_to 'お問い合わせ', new_user_session_path %></li>
           <% end %>

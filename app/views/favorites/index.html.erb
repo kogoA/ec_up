@@ -1,0 +1,17 @@
+<div class='container'>
+  <h4 class='center mb-30'>ほしい物リスト</h4>
+    <ul class='collection with-header'>
+      <% @favorite_products.each do |product| %>
+        <li class='collection-item'>
+            <p>
+              <span>・</span><%= link_to product[:name], product_path(product.id) %>
+                <span class="right">
+                  <%= link_to product_favorites_path(product.id), method: :delete do %>
+                    <span class="basket__delete">削除 </span>
+                  <% end %>
+              </span>
+            </p>
+          <% end %>
+        </li>
+    </ul>
+</div>
