@@ -35,7 +35,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Sass for CSS
-gem 'bootstrap', '4.1.1'
+gem 'bootstrap', '4.3.1'
 gem 'material_icons'
 gem 'materialize-sass', '~> 1.0.0'
 
