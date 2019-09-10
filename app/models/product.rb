@@ -16,7 +16,9 @@ class Product < ApplicationRecord
   validates :unit, presence: true
   has_many :basket, dependent: :destroy
   has_many :purchase_record_products, dependent: :destroy
+
   belongs_to :admin, optional: true
+  has_many :favorites
   USD_RATE = 110
   extend Enumerize
   enumerize :unit, in: %i[yen usd]
