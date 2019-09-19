@@ -3,15 +3,37 @@
 
 ![ダミー画像](https://user-images.githubusercontent.com/45598368/63143720-a9b6ce00-c02a-11e9-8fed-e83b70543c2b.gif "park gallery")
 
+
 * Description  
  ECサイトアプリです。  
  Adminが商品の登録(商品は登録済)を行い、Userは商品の購入が出来ます。
- Adminは売上管理機能があります。
+ Adminは売上管理機能があります。  
+
+* Functions  
+・ユーザー管理機能(Devise)  
+・日本語化(i18n)  
+・画像アップロード機能(CarrierWave,Mini_magic)  
+・クレジット決済機能(Stripe)  
+・売上管理機能(当月,全履歴 )  
+・ランダム商品ID作成機能(Hashid-rails)  
+・ほしい物リスト機能  
+・問い合わせ機能  
+
+* Infrastructure  
+AWS  
+・EC2  
+・RDS  
+・VPC  
+・ROUTE53  
+
+* Test  
+・RSpec  
+・統合テスト(feature spec)  
 
 * Versions  
-ruby 2.5.1  
-Rails 5.2.3  
-Bundler 2.0.1
+・ruby 2.5.1  
+・Rails 5.2.3  
+・Bundler 2.0.1
 
 * Dependency  
 ・Devise  
@@ -33,14 +55,6 @@ Bundler 2.0.1
 ・PurchaseRecordProduct  
 
 * Usage  
-●商品を登録
-Adminでログインします。  
-1.http://localhost:3000/admins/sign_in にアクセスしログインする  
-Email:aaaaaaaa@gmail.com  
-Password:password  
-2.新規商品の追加を選択し商品を登録する  
-3.ログアウト（アドミン）をクリックしログアウトする  
-4.park galleryをクリックし最後の欄に登録が反映されます  
 ●商品を購入方法
 Userでログインします。  
 1.http://localhost:3000/ ←home画面から"ログイン"をクリック、下記を入力後  
