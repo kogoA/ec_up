@@ -3,6 +3,10 @@
 
 ![ダミー画像](https://user-images.githubusercontent.com/45598368/63143720-a9b6ce00-c02a-11e9-8fed-e83b70543c2b.gif "park gallery")
 
+## AWS構成図
+![aws](https://user-images.githubusercontent.com/45598368/65215797-c17de800-dae9-11e9-9135-f877e6d70086.png)  
+
+# URL:http://ec.parkgallery.site/
 
 * Description  
  ECサイトアプリです。  
@@ -54,7 +58,7 @@ AWS
 ・PurchaseRecord  
 ・PurchaseRecordProduct  
 
-* Usage  
+* Usage(local)  
 ●商品を購入方法
 Userでログインします。  
 1.http://localhost:3000/ ←home画面から"ログイン"をクリック、下記を入力後  
