@@ -57,6 +57,7 @@ AWS
 ・Product  
 ・PurchaseRecord  
 ・PurchaseRecordProduct  
+・Favorite  
 
 * Usage(local)  
 ●商品を購入方法
