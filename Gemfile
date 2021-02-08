@@ -51,7 +51,7 @@ gem 'enumerize'
 gem 'jquery-rails'
 
 # 画像アップロード
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 # hash for IDs
 gem 'hashid-rails', '~> 1.0'
